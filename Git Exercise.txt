@@ -1,0 +1,306 @@
+~/Documents/Springboard/Projects
+❯ mkdir GitAdventure
+
+~/Documents/Springboard/Projects
+❯ cd GitAdventure 
+
+~/Documents/Springboard/Projects/GitAdventure
+❯ git init
+Initialized empty Git repository in /Users/perkolatte/Documents/Springboard/Projects/GitAdventure/.git/
+
+~/Documents/Springboard/Projects/GitAdventure main
+❯ touch journey.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ echo "Embarking on my journey to master Git." > journey.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cat journey.txt 
+Embarking on my journey to master Git.
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	journey.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add journey.txt 
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git commit -m "Initial commit"
+[main (root-commit) a90778b] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 journey.txt
+
+~/Documents/Springboard/Projects/GitAdventure main
+❯ echo "This file is meant to be deleted." > temp.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+journey.txt	temp.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cat temp.txt
+This file is meant to be deleted.
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status 
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	temp.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status 
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   temp.txt
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git commit -m "temp added"
+[main de1a513] temp added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 temp.txt
+
+~/Documents/Springboard/Projects/GitAdventure main
+❯ git rm temp.txt 
+rm 'temp.txt'
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+journey.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cp journey.txt adventure.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+adventure.txt	journey.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ rm adventure.txt 
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ mv journey.txt adventure.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+adventure.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cat adventure.txt 
+Embarking on my journey to master Git.
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ echo "My journey evolves into an adventure with Git." > adventure.txt 
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cat adventure.txt 
+My journey evolves into an adventure with Git.
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *  
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status 
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   adventure.txt
+	deleted:    temp.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    journey.txt
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   adventure.txt
+	deleted:    temp.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    journey.txt
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git rm journey.txt
+rm 'journey.txt'
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status 
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   adventure.txt
+	deleted:    journey.txt
+	deleted:    temp.txt
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+adventure.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git commit -m "Renamed journey to adventure and changed content."
+[main cb69204] Renamed journey to adventure and changed content.
+ 3 files changed, 1 insertion(+), 2 deletions(-)
+ create mode 100644 adventure.txt
+ delete mode 100644 journey.txt
+ delete mode 100644 temp.txt
+
+~/Documents/Springboard/Projects/GitAdventure main
+❯ echo "Exploring the depths of Git commands and their powers." > adventure.txt 
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cat ad
+cat: ad: No such file or directory
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ cat adventure.txt 
+Exploring the depths of Git commands and their powers.
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   adventure.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ echo "*.log" > .gitignore
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+adventure.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls -a
+.		..		.git		.gitignore	adventure.txt
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   adventure.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   adventure.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add all
+fatal: pathspec 'all' did not match any files
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *  
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status 
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   adventure.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add .gitignore 
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ touch test.log 
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ ls
+adventure.txt	test.log
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .gitignore
+	modified:   adventure.txt
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *
+The following paths are ignored by one of your .gitignore files:
+test.log
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git add *
+The following paths are ignored by one of your .gitignore files:
+test.log
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .gitignore
+	modified:   adventure.txt
+
+
+~/Documents/Springboard/Projects/GitAdventure main*
+❯ git commit -m "added .gitignore for .log files"
+[main 87caa80] added .gitignore for .log files
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+
+~/Documents/Springboard/Projects/GitAdventure main
+❯                                                  
